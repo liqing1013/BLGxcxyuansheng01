@@ -1,0 +1,14 @@
+<template>
+    <view>通知公告</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Inform extends wepy.page {
+}
+</script>
+
+<style lang='less'>
+
+</style>

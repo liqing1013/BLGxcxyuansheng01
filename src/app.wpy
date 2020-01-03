@@ -1,0 +1,66 @@
+<style lang='less'></style>
+
+<script>
+import wepy from 'wepy'
+
+export default class extends wepy.app {
+  // 全局的配置节点
+  config = {
+    pages: [
+      'pages/tabs/home',
+      'pages/tabs/inform',
+      'pages/tabs/setting'
+    ],
+    window: {
+      backgroundTextStyle: 'light',
+      navigationBarBackgroundColor: '#e21918',
+      navigationBarTitleText: '北理银龄',
+      navigationBarTextStyle: 'white'
+    },
+     // 全局配置tabbar效果
+    tabBar: {
+      // 设置tabbar被选中时文本的颜色
+      selectedColor: '#d81e06',
+      // 设置tabbar默认的文字颜色
+      color:'#707070',
+        // 背景颜色
+      backgroundColor:'#eee',
+      // 配置tabbar列表
+      list: [
+        {
+          // 页面路径
+          pagePath: 'pages/tabs/home',
+          // 显示的文本
+          text: '首页',
+          // // 默认图标
+          iconPath: '/assets/icons/home.png',
+          // // 选中图标
+          selectedIconPath: '/assets/icons/home-active.png'
+        },
+        {
+          pagePath: 'pages/tabs/inform',
+          text: '通知和公告',
+          iconPath: '/assets/icons/inform.png',
+          selectedIconPath: '/assets/icons/inform-active.png'
+        },
+         {
+          pagePath: 'pages/tabs/setting',
+          text: '设置',
+          iconPath: '/assets/icons/setting.png',
+          selectedIconPath: '/assets/icons/setting-active.png'
+        }]
+      }
+    }
+  // 全局共享数据的节点
+  globalData = {}
+
+  // 构造函数
+  constructor() {
+    super()
+    this.use('requestfix')
+  }
+
+  // 全局生命周期函数
+  onLaunch() {}
+}
+</script>

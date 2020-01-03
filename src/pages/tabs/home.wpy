@@ -1,0 +1,18 @@
+<template>
+    <view>
+        <!-- 顶部轮播效果 -->
+        <swiper>
+        <!-- 顶部轮播效果 -->
+    </view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Home extends wepy.page {
+}
+</script>
+
+<style lang='less'>
+
+</style>
