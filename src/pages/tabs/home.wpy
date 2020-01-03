@@ -1,7 +1,20 @@
 <template>
     <view>
         <!-- 顶部轮播效果 -->
-        <swiper>
+        <swiper indicator-dots interval="2000" circular autoplay duration="250" indicator-active-color="#fff">
+            <swiper-item class="father">
+                <image mode="widthFix" src="/assets/images/home04.jpg"/>
+                <view class="box">12341234</view>
+            </swiper-item>
+            <swiper-item class="father">
+               <image mode="widthFix" src="/assets/images/home05.jpg"/>
+               <view class="box">34634563</view>
+            </swiper-item>
+            <swiper-item class="father">
+               <image mode="widthFix" src="/assets/images/home06.jpg"/>
+               <view class="box">4574567456</view>
+            </swiper-item>
+        </swiper>
         <!-- 顶部轮播效果 -->
     </view>
 </template>
@@ -14,5 +27,27 @@ export default class Home extends wepy.page {
 </script>
 
 <style lang='less'>
-
+// 轮播图 中图标位置
+.wx-swiper-dots {
+    position: relative;
+    left: unset !important;
+    right: 0;
+}
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+    margin-bottom: -5rpx;
+}
+.father{
+    position: relative;
+    image{
+        height: 150px!important;
+    }
+}
+.box{
+    width: 100%;
+    height: 60rpx;
+    background:rgba(0,0,0,0.3);
+    position: absolute;
+    bottom:0;
+    color:#fff;
+}
 </style>
