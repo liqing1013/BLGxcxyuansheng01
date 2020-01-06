@@ -1,5 +1,20 @@
 <template>
-    <view>菜单键页</view>
+    <view>
+        <vlew class="telephoneMenu">
+            <!-- 连心电话 -->
+            <view class='telephone'>
+                <image src="../../assets/images/lianxin.png"/>
+                <text>党建工作</text>
+            </view>
+            <!-- 连心电话 -->
+            <!-- 其他 -->
+            <view class='qit'>
+                <image src="../../assets/images/qit.png"/>
+                <text>支部信息</text>
+            </view>
+            <!-- 其他 -->
+        </vlew>
+    </view>
 </template>
 
 <script>
@@ -9,6 +24,28 @@ export default class Menumove extends wepy.page {
 }
 </script>
 
-<style lang='less'>
+<style lang='less' scoped>
+    .telephoneMenu{
+    display: flex;
+    background: #fff;
+    padding: 20rpx 0;
+    .telephone, .qit{
+        width: 200rpx;
+        height: 240rpx;
+        display: flex;
+        background:#fff;
+        flex-direction: column;
+        justify-content:space-around;
+        align-items: center;
+            image{
+                width: 70rpx;
+                height: 70rpx;
+                border-radius: 50%
+            }
+        }
+    .qit{
+        border-left:1rpx solid #eee 
+    }
+}
 
 </style>

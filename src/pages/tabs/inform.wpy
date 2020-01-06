@@ -1,5 +1,15 @@
 <template>
-    <view>通知公告</view>
+    <view>
+        <!-- 搜索条 -->
+        <van-search
+            value="{{ value }}"
+            placeholder="请输入搜索关键词"
+            show-action
+            bind:search="onSearch"
+            bind:cancel="onCancel"
+        />
+        <!-- 搜索条 -->
+    </view>
 </template>
 
 <script>
