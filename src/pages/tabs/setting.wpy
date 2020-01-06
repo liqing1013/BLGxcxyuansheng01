@@ -1,5 +1,53 @@
 <template>
-    <view>设置</view>
+    <view class="setting">
+        <!-- 上 -->
+        <view class="top">
+            <view class="image"></view>
+            <!-- <image src=""/> -->
+        </view>
+        <!-- 上 -->
+
+        <!-- 下 -->
+         <view class="bottom">
+            <navigator url="../personal/infomation">
+                <view class="user">
+                    <!-- <image src=""/> -->
+                    <text class="image">..</text>
+                    <text>个人信息</text>
+                    <vlew class="right">》</vlew>
+                </view>
+            </navigator>
+           
+            <navigator url="../personal/infomation">
+                <view class="user">
+                    <!-- <image src=""/> -->
+                    <text class="image">..</text>
+                    <text>浏览历史</text>
+                    <vlew class="right">》</vlew>
+                </view>
+            </navigator>
+            
+                <view class="user">
+                    <!-- <image src=""/> -->
+                    <text class="image">..</text>
+                    <text>关于离退休系统</text>
+                    <vlew class="right">》</vlew>
+                </view>
+                <view class="user">
+                    <!-- <image src=""/> -->
+                    <text class="image">..</text>
+                    <text>绑定微信</text>
+                    <vlew class="right">》</vlew>
+                </view>
+                <view class="user">
+                    <!-- <image src=""/> -->
+                    <text class="image">..</text>
+                    <text>安全退出</text>
+                    <vlew class="right">》</vlew>
+                </view>
+         </view>
+        <!-- 下 -->
+    </view>
 </template>
 
 <script>
@@ -9,6 +57,46 @@ export default class Setting extends wepy.page {
 }
 </script>
 
-<style lang='less'>
-
+<style lang='less' scoped>
+.setting{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .top{
+        height: 300rpx;
+        background: linear-gradient(#FE444F,#FB5925);
+        position: relative;
+        .image{
+            width: 152rpx;
+            height: 152rpx;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border-radius: 50%;
+        }
+    }
+    .bottom{
+        background: #eee;
+        .user{
+            display: flex;
+            height: 104rpx;
+            line-height: 104rpx;
+            position: relative;
+            padding: 0 40rpx;
+            border-bottom: 2rpx solid #ccc;
+            background: #fff;
+            image{
+                width: 24rpx;
+                height: 24rpx;
+                margin-right: 15rpx;
+            }
+            .right{
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+}
 </style>

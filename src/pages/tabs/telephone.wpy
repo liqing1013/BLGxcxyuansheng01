@@ -12,13 +12,13 @@
         <vlew class="telephoneMenu">
             <!-- 连心电话 -->
             <view class='telephone'>
-                <image src="../../assets/images/retire/lianxin.png"/>
+                <image src="../../assets/images/lianxin.png"/>
                 <text>连心电话</text>
             </view>
             <!-- 连心电话 -->
             <!-- 其他 -->
             <view class='qit'>
-                <image src="../../assets/images/retire/qit.png"/>
+                <image src="../../assets/images/qit.png"/>
                 <text>其它</text>
             </view>
             <!-- 其他 -->

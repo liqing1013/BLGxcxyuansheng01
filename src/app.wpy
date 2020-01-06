@@ -13,9 +13,11 @@ export default class extends wepy.app {
       'pages/tabs/telephone',
       'pages/home/menumove',
       'pages/home/newdetail',
-      'pages/home/personal/search',
       'pages/home/statistics/index',
-      'pages/login/login'
+          'pages/home/newlist',
+      'pages/login/login',
+      'pages/personal/search',
+      'pages/personal/infomation'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -70,7 +72,9 @@ export default class extends wepy.app {
       "van-tab": "./assets/vant/tab/index",
       "van-tabs": "./assets/vant/tabs/index",
       "van-card": "./assets/vant/card/index",
-      "van-search": "./assets/vant/search/index"
+      "van-search": "./assets/vant/search/index",
+      "van-field": "./assets/vant/field/index",
+      "van-nav-bar": "./assets/vant/nav-bar/index"
     }
   }
  

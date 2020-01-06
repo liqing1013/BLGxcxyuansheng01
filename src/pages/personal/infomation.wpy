@@ -1,0 +1,14 @@
+<template>
+    <view>个人信息</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Infomation extends wepy.page {
+}
+</script>
+
+<style lang='less' scoped>
+
+</style>

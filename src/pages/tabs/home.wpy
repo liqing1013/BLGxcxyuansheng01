@@ -48,7 +48,7 @@
                 text="兴趣社团"
                 link-type="reLaunch" />
             <van-grid-item icon="photo-o" 
-                url="/pages/home/personal/search" 
+                url="/pages/personal/search" 
                 text="人员查询"
                 link-type="reLaunch" />
             <van-grid-item icon="photo-o" 
@@ -116,6 +116,10 @@
         </van-tabs>
     <!-- 底部标签栏 -->
 
+    <!-- 查看更多新闻列表 -->
+        <navigator class="more" url="../home/newlist" hover-stay-time="0">查看更多>>></navigator>
+    <!-- 查看更多新闻列表 -->
+
     </view>
 </template>
 
@@ -145,6 +149,7 @@ export default class Home extends wepy.page {
         position: relative;
         image{
             height: 150px!important;
+            width: 100%;
         }
     }
     .box{
@@ -170,6 +175,15 @@ export default class Home extends wepy.page {
     -webkit-box-orient: vertical;
     overflow: hidden;
     margin-left: 50rpx
-}
+    }
 // 底部标签栏
+
+// 查看更多新闻列表
+    .more{
+        color: #88846f;
+        position:absolute;
+        left: 50%;
+        transform:translate(-50%)
+    }
+// 查看更多新闻列表
 </style>

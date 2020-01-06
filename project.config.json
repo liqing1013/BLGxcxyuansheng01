@@ -39,6 +39,14 @@
 					"id": 0,
 					"name": "电话铺",
 					"pathName": "pages/tabs/telephone",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置页面",
+					"pathName": "pages/tabs/setting",
+					"query": "",
 					"scene": null
 				}
 			]
