@@ -1,0 +1,14 @@
+<template>
+    <view>统计分析页</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Index extends wepy.page {
+}
+</script>
+
+<style lang='less'>
+
+</style>

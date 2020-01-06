@@ -1,53 +1,175 @@
 <template>
     <view>
-        <!-- 顶部轮播效果 -->
+    <!-- 顶部轮播效果 -->
         <swiper indicator-dots interval="2000" circular autoplay duration="250" indicator-active-color="#fff">
             <swiper-item class="father">
-                <image mode="widthFix" src="/assets/images/home04.jpg"/>
+                <image mode="scaleToFill" src="/assets/images/home04.jpg"/>
                 <view class="box">12341234</view>
             </swiper-item>
             <swiper-item class="father">
-               <image mode="widthFix" src="/assets/images/home05.jpg"/>
+               <image mode="scaleToFill" src="/assets/images/home05.jpg"/>
                <view class="box">34634563</view>
             </swiper-item>
             <swiper-item class="father">
-               <image mode="widthFix" src="/assets/images/home06.jpg"/>
+               <image mode="scaleToFill" src="/assets/images/home06.jpg"/>
                <view class="box">4574567456</view>
             </swiper-item>
         </swiper>
-        <!-- 顶部轮播效果 -->
+    <!-- 顶部轮播效果 -->
+
+    <!-- 九宫格 -->
+        <van-grid column-num="3">
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/menumove" 
+                text="党建管理"
+                link-type="reLaunch"/>
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/menumove" 
+                text="活动报名"
+                link-type="reLaunch" />
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/menumove" 
+                text="老年教育"
+                link-type="reLaunch" />
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/menumove" 
+                text="走访慰问"
+                link-type="reLaunch" />
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/menumove" 
+                text="活动签到"
+                link-type="reLaunch" />
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/menumove" 
+                text="年度表彰"
+                link-type="reLaunch" />
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/menumove" 
+                text="兴趣社团"
+                link-type="reLaunch" />
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/personal/search" 
+                text="人员查询"
+                link-type="reLaunch" />
+            <van-grid-item icon="photo-o" 
+                url="/pages/home/statistics/index" 
+                text="统计分析"
+                link-type="reLaunch" />
+        </van-grid>
+    <!-- 九宫格 -->
+
+    <!-- 底部标签栏 -->
+        <van-tabs
+            active="{{ active }}"
+            bind:change="onChange"
+            color="#e21918"
+            >
+            <van-tab title="国家大事">
+                <van-card thumb-link="/pages/home/newdetail" link-type="redirectTo">
+                    <view class="title" slot="title">
+                        实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%
+                    </view>
+                    <vlew slot="thumb">
+                        <image src="../../assets/images/home06.jpg" style="width:228.6rpx;height:144rpx"/>
+                    </vlew>
+                    <view slot="bottom" style="position:absolute;right:0;color:#696666">
+                        2019.12.12
+                    </view>
+                </van-card>
+                <van-card thumb-link="/pages/home/newdetail" link-type="redirectTo">
+                    <view class="title" slot="title">
+                        实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%
+                    </view>
+                    <vlew slot="thumb">
+                        <image src="../../assets/images/home06.jpg" style="width:228.6rpx;height:144rpx"/>
+                    </vlew>
+                    <view slot="bottom" style="position:absolute;right:0;color:#696666">
+                        2019.12.12
+                    </view>
+                </van-card>
+            </van-tab>
+
+            <van-tab title="工作动态">
+                <van-card thumb-link="/pages/home/newdetail" link-type="redirectTo">
+                    <view class="title" slot="title">
+                        实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%
+                    </view>
+                    <vlew slot="thumb">
+                        <image src="../../assets/images/home07.jpg" style="width:228.6rpx;height:144rpx"/>
+                    </vlew>
+                    <view slot="bottom" style="position:absolute;right:0;color:#696666">
+                        2019.12.12
+                    </view>
+                </van-card>
+                <van-card thumb-link="/pages/home/newdetail" link-type="redirectTo">
+                    <view class="title" slot="title">
+                        实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%实打实！全国居民人均可支配收入同比增长6.6%
+                    </view>
+                    <vlew slot="thumb">
+                        <image src="../../assets/images/home06.jpg" style="width:228.6rpx;height:144rpx"/>
+                    </vlew>
+                    <view slot="bottom" style="position:absolute;right:0;color:#696666">
+                        2019.12.12
+                    </view>
+                </van-card>
+            </van-tab>
+        </van-tabs>
+    <!-- 底部标签栏 -->
+
     </view>
 </template>
 
 <script>
 import wepy from 'wepy'
+//1.导入需要的mixin
+import mix from '../../mixins/tabs/home.js'
 
 export default class Home extends wepy.page {
+//2.通过mixins的节点，把代码挂载过来
+    mixins = [mix]
 }
 </script>
 
-<style lang='less'>
-// 轮播图 中图标位置
-.wx-swiper-dots {
-    position: relative;
-    left: unset !important;
-    right: 0;
-}
-.wx-swiper-dots.wx-swiper-dots-horizontal {
-    margin-bottom: -5rpx;
-}
-.father{
-    position: relative;
-    image{
-        height: 150px!important;
+<style lang='less' scoped>
+// 轮播图 
+    // 图标位置
+    .wx-swiper-dots {
+        position: relative;
+        left: unset !important;
+        right: 0;
     }
+    .wx-swiper-dots.wx-swiper-dots-horizontal {
+        margin-bottom: -5rpx;
+    }
+    .father{
+        position: relative;
+        image{
+            height: 150px!important;
+        }
+    }
+    .box{
+        width: 100%;
+        height: 60rpx;
+        background:rgba(0,0,0,0.3);
+        position: absolute;
+        bottom:0;
+        color:#fff;
+    }
+// 轮播图
+
+// 底部标签栏
+    //卡片的高度
+    .title{
+    // height:104rpx;
+    // overflow:hidden;
+    // text-overflow:ellipsis;//溢出文本省略号代替
+    // -webkit-line-clamp: 2;//限制文本行数
+    // font-size: 30rpx
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-left: 50rpx
 }
-.box{
-    width: 100%;
-    height: 60rpx;
-    background:rgba(0,0,0,0.3);
-    position: absolute;
-    bottom:0;
-    color:#fff;
-}
+// 底部标签栏
 </style>

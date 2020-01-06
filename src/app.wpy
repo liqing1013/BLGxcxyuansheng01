@@ -9,7 +9,13 @@ export default class extends wepy.app {
     pages: [
       'pages/tabs/home',
       'pages/tabs/inform',
-      'pages/tabs/setting'
+      'pages/tabs/setting',
+      'pages/tabs/telephone',
+      'pages/home/menumove',
+      'pages/home/newdetail',
+      'pages/home/personal/search',
+      'pages/home/statistics/index',
+      'pages/login/login'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -38,6 +44,12 @@ export default class extends wepy.app {
           selectedIconPath: '/assets/icons/home-active.png'
         },
         {
+          pagePath: 'pages/tabs/telephone',
+          text: '电话簿',
+          iconPath: '/assets/icons/telephone.png',
+          selectedIconPath: '/assets/icons/telephone-active.png'
+        },
+        {
           pagePath: 'pages/tabs/inform',
           text: '通知和公告',
           iconPath: '/assets/icons/inform.png',
@@ -48,9 +60,20 @@ export default class extends wepy.app {
           text: '设置',
           iconPath: '/assets/icons/setting.png',
           selectedIconPath: '/assets/icons/setting-active.png'
-        }]
-      }
+        }
+      ]
+    },
+    // 全局配置组件
+    usingComponents:{
+      "van-grid": "./assets/vant/grid/index",
+      "van-grid-item": "./assets/vant/grid-item/index",
+      "van-tab": "./assets/vant/tab/index",
+      "van-tabs": "./assets/vant/tabs/index",
+      "van-card": "./assets/vant/card/index",
+      "van-search": "./assets/vant/search/index"
     }
+  }
+ 
   // 全局共享数据的节点
   globalData = {}
 
@@ -58,6 +81,7 @@ export default class extends wepy.app {
   constructor() {
     super()
     this.use('requestfix')
+    this.use('promisify')//开启promisify
   }
 
   // 全局生命周期函数

@@ -1,0 +1,14 @@
+<template>
+    <view>菜单键页</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Menumove extends wepy.page {
+}
+</script>
+
+<style lang='less'>
+
+</style>

@@ -1,0 +1,14 @@
+<template>
+    <view>账号登陆</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Login extends wepy.page {
+}
+</script>
+
+<style lang='less'>
+
+</style>

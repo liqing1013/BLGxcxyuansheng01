@@ -1,0 +1,14 @@
+<template>
+    <view>新闻页</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Newdetail extends wepy.page {
+}
+</script>
+
+<style lang='less'>
+
+</style>
