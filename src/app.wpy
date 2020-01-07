@@ -7,6 +7,7 @@ export default class extends wepy.app {
   // 全局的配置节点
   config = {
     pages: [
+      'pages/login/login',
       'pages/tabs/home',
       'pages/tabs/inform',
       'pages/tabs/setting',
@@ -14,14 +15,26 @@ export default class extends wepy.app {
       'pages/home/menumove',
       'pages/home/newdetail',
       'pages/home/statistics/index',
-          'pages/home/newlist',
-      'pages/login/login',
+      'pages/home/newlist',
       'pages/personal/search',
-      'pages/personal/infomation'
+      'pages/personal/infomation',
+      'pages/personal/search/detail',
+      'pages/personal/history',
+      'pages/personal/gywm',
+      'pages/personal/bdwechat',
+      'pages/faxx/index',
+      'pages/staffwages/index',
+      'pages/hdgl/hd/index',
+      'pages/hdgl/hd/detail',
+      'pages/stgl/wchd/detail',
+      'pages/stgl/wchd/index',
+      'pages/stgl/wchd/toAdd',
+      'pages/stgl/hdjh/index',
+      'pages/stgl/hdjh/detail'
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#e21918',
+      navigationBarBackgroundColor: '#21a3f1',
       navigationBarTitleText: '北理银龄',
       navigationBarTextStyle: 'white'
     },
@@ -74,7 +87,8 @@ export default class extends wepy.app {
       "van-card": "./assets/vant/card/index",
       "van-search": "./assets/vant/search/index",
       "van-field": "./assets/vant/field/index",
-      "van-nav-bar": "./assets/vant/nav-bar/index"
+      "van-nav-bar": "./assets/vant/nav-bar/index",
+      "van-button": "./assets/vant/button/index"
     }
   }
  

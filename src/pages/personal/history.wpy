@@ -1,0 +1,14 @@
+<template>
+    <view>浏览历史</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class History extends wepy.page {
+}
+</script>
+
+<style lang='less' scoped>
+
+</style>

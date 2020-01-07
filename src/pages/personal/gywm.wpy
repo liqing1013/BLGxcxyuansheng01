@@ -1,0 +1,14 @@
+<template>
+    <view>关于离退休系统</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Gywm extends wepy.page {
+}
+</script>
+
+<style lang='less' scoped>
+
+</style>

@@ -2,18 +2,24 @@
     <view>
     <!-- 顶部轮播效果 -->
         <swiper indicator-dots interval="2000" circular autoplay duration="250" indicator-active-color="#fff">
-            <swiper-item class="father">
-                <image mode="scaleToFill" src="/assets/images/home04.jpg"/>
-                <view class="box">12341234</view>
-            </swiper-item>
-            <swiper-item class="father">
-               <image mode="scaleToFill" src="/assets/images/home05.jpg"/>
-               <view class="box">34634563</view>
-            </swiper-item>
-            <swiper-item class="father">
-               <image mode="scaleToFill" src="/assets/images/home06.jpg"/>
-               <view class="box">4574567456</view>
-            </swiper-item>
+            <navigator url="/pages/home/newdetail" hover-class="none">
+                <swiper-item class="father">
+                    <image mode="scaleToFill" src="/assets/images/home04.jpg"/>
+                    <view class="box">12341234</view>
+                </swiper-item>
+            </navigator>
+            <navigator url="/pages/home/newdetail" hover-class="none">
+                <swiper-item class="father">
+                    <image mode="scaleToFill" src="/assets/images/home05.jpg"/>
+                    <view class="box">34634563</view>
+                </swiper-item>
+            </navigator>
+            <navigator url="/pages/home/newdetail" hover-class="none">
+                <swiper-item class="father">
+                    <image mode="scaleToFill" src="/assets/images/home06.jpg"/>
+                    <view class="box">4574567456</view>
+                </swiper-item>
+            </navigator>
         </swiper>
     <!-- 顶部轮播效果 -->
 

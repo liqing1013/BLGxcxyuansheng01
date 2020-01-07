@@ -1,6 +1,7 @@
 <template>
     <view>
         <van-cell-group>
+            <!-- 输入用户名 -->
             <van-field
                 value="{{ username }}"
                 required
@@ -10,7 +11,7 @@
                 placeholder="请输入用户名"
                 bind:click-icon="onClickIcon"
             />
-
+            <!-- 输入密码 -->
             <van-field
                 value="{{ password }}"
                 type="password"
@@ -18,8 +19,12 @@
                 placeholder="请输入密码"
                 required
                 border="{{ false }}"
-        />
-</van-cell-group>
+            />
+            <!-- 登陆按钮 -->
+            <navigator url="/pages/tabs/home" hover-class="none" open-type="switchTab">
+                <van-button color="#8bb91c" size="small" class='abc'>登陆</van-button>
+            </navigator>
+        </van-cell-group>
     </view>
 </template>
 
@@ -31,5 +36,10 @@ export default class Login extends wepy.page {
 </script>
 
 <style lang='less'>
-
+.abc{
+    margin-top: 20rpx;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%)
+}
 </style>

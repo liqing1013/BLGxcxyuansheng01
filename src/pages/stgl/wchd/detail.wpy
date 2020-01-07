@@ -1,0 +1,14 @@
+<template>
+    <view>外出活动详情</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Detail extends wepy.page {
+}
+</script>
+
+<style lang='less' scoped>
+
+</style>

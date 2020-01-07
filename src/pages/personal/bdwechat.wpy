@@ -1,0 +1,14 @@
+<template>
+    <view>绑定微信</view>
+</template>
+
+<script>
+import wepy from 'wepy'
+
+export default class Bdwechat extends wepy.page {
+}
+</script>
+
+<style lang='less' scoped>
+
+</style>
